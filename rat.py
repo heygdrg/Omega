@@ -63,4 +63,4 @@ while True:
     console = get_console()
     console.print(banner, style="green")
 
-    rat()
+    rat() 
