@@ -1,3 +1,10 @@
+# proudly code by BKS#1958 and mfr
+#no skid permitted 
+#only for educational purpose
+#don't forget to make us a donate to support us in this big project
+#with the big help of bluered the creator of pystyle
+
+
 from os import system
 from rich import * 
 from subprocess import check_output
