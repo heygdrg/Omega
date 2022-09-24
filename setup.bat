@@ -8,6 +8,9 @@ python -m pip install pyautogui
 python -m pip install time
 python -m pip install datetime
 python -m pip install platform
+python -m pip install sounddevice
+python -m pip install opencv-python
+python -m pip install scripy
 
 cls
 echo python omega.py >> start.bat
