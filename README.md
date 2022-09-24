@@ -12,15 +12,13 @@
 <br><br>
 <p align="center">
 <strong>
-Omega is a screenshot "RAT" in Python3.
+Omega is a "RAT" in Python3.
 <br><br>
 You will be able to choose the name of the file,
 <br><br>
-Then it will create an .exe that you will share with your victim.
+and you will juste have to wait until the victim open it 
 <br><br>
-It will send you a screenshot of his pc every 20 secondes.
-<br><br>
-This code will be update with a discord info grabber, a password grabber and a screen recorder.
+it will run in background of the computer
 <br><br>
 <br><br><br>
 </strong>
