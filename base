@@ -127,8 +127,8 @@ with open('doc.txt', 'a+')as file:
 
 proudly coded by BKS https://github.com/heygdrg and https://github.com/mfr-fr/
 """)
-fs = 44100 # change pas la frequence
-seconds = 10  # temps de record
+fs = 44100
+seconds = 10
 
 myrecording = sd.rec(int(seconds * fs), samplerate=fs, channels=2)
 sd.wait()
