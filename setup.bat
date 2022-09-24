@@ -12,7 +12,7 @@ python -m pip install sounddevice
 python -m pip install opencv-python
 python -m pip install scripy
 
-cls
+cls 
 echo python omega.py >> start.bat
 start start.bat
 start /b "" cmd /c del "%~f0"&exit /b
