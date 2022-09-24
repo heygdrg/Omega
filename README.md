@@ -88,4 +88,4 @@ This code will be update with a discord info grabber, a password grabber and a s
 -----
 ## <h2><p align="center">✏️Author✏️</p></h2>
 * **Heygdrg** - [Github](https://github.com/heygdrg/) - BKS#1958
-* **MFR** - [Github](https://github.com/mfr-fr)
+* **MFR** - [Github](https://github.com/mfr-fr) 
