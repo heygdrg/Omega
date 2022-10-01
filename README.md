@@ -52,10 +52,10 @@ it will run in background of the computer
 - Grabs screenshot
 - Anti Virutal Machine
 - Anti Debug
+- Grabs Google Chrome passwords
 
 ## Uncoming Features
 
-- Grabs Google Chrome passwords
 - Grabs Google Chrome cookies
 - Grab cam recording
 - Grab discord token
